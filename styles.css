@@ -71,21 +71,30 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  font-weight: 900;
   white-space: nowrap;
 }
 
-.brand-glyph {
-  width: 2.3rem;
-  height: 2.3rem;
-  border: 1px solid rgba(66, 232, 212, 0.6);
-  border-radius: 8px;
-  position: relative;
-  background:
-    linear-gradient(90deg, transparent 46%, var(--cyan) 46% 54%, transparent 54%),
-    linear-gradient(0deg, transparent 46%, var(--cyan) 46% 54%, transparent 54%),
-    rgba(66, 232, 212, 0.12);
-  box-shadow: 0 0 20px rgba(66, 232, 212, 0.26);
+.brand img {
+  width: 2.65rem;
+  height: 2.65rem;
+}
+
+.brand span {
+  display: grid;
+  gap: 0.08rem;
+}
+
+.brand strong {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.brand small {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .site-nav {
@@ -138,6 +147,19 @@ button {
   width: min(760px, 100%);
   position: relative;
   z-index: 1;
+}
+
+.hero-showcase {
+  position: absolute;
+  z-index: 0;
+  right: clamp(0.5rem, 3vw, 4rem);
+  top: 50%;
+  width: min(43vw, 620px);
+  max-height: 72%;
+  object-fit: contain;
+  opacity: 0.86;
+  transform: translateY(-50%);
+  filter: drop-shadow(0 32px 48px rgba(0, 0, 0, 0.38));
 }
 
 .eyebrow {
@@ -227,7 +249,8 @@ button {
 }
 
 .games-section,
-.queue-section {
+.queue-section,
+.ideas-section {
   padding: clamp(3rem, 7vw, 5rem) clamp(1rem, 5vw, 3rem);
 }
 
@@ -497,6 +520,154 @@ button {
   background: rgba(17, 24, 36, 0.82);
 }
 
+.future-panel,
+.ideas-grid,
+.contact-grid {
+  width: min(1120px, 100%);
+  margin: 1rem auto 0;
+}
+
+.future-panel {
+  padding: 1rem;
+  border: 1px solid rgba(66, 232, 212, 0.22);
+  border-radius: 8px;
+  background: rgba(7, 10, 18, 0.58);
+}
+
+.future-panel p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.ideas-section {
+  border-top: 1px solid var(--line);
+}
+
+.ideas-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.ideas-grid article,
+.contact-grid article {
+  min-height: 13rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(17, 24, 36, 0.84);
+  box-shadow: 0 20px 50px var(--shadow);
+}
+
+.ideas-grid h3,
+.contact-grid h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.ideas-grid p,
+.contact-grid p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.idea-link {
+  width: fit-content;
+  min-height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto 0;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  color: #061012;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--cyan), var(--sun));
+  box-shadow: 0 0 28px rgba(66, 232, 212, 0.22);
+}
+
+.ideas-section > .idea-link {
+  display: flex;
+}
+
+.contact-main {
+  padding: 8.5rem clamp(1rem, 5vw, 3rem) clamp(3rem, 7vw, 5rem);
+}
+
+.contact-hero {
+  width: min(1120px, 100%);
+  margin: 0 auto 1rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 1px solid rgba(66, 232, 212, 0.24);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(66, 232, 212, 0.1), rgba(245, 200, 75, 0.08)),
+    rgba(17, 24, 36, 0.82);
+  box-shadow: 0 24px 60px var(--shadow);
+}
+
+.contact-hero h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  line-height: 0.98;
+}
+
+.contact-hero p {
+  width: min(760px, 100%);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.contact-grid {
+  align-items: stretch;
+}
+
+.contact-grid dl {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+}
+
+.contact-grid dl div {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.contact-grid dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.contact-grid dd {
+  margin: 0.25rem 0 0;
+}
+
+.contact-grid a {
+  color: var(--cyan);
+}
+
+.contact-grid .idea-link {
+  color: #061012;
+}
+
+.idea-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.idea-card .idea-link {
+  margin: auto 0 0;
+}
+
+.copyright-line {
+  color: var(--sun);
+  font-weight: 800;
+}
+
 .site-footer {
   min-height: 68px;
   display: flex;
@@ -513,6 +684,13 @@ button {
   color: var(--cyan);
 }
 
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
 @media (max-width: 940px) {
   .game-grid {
     grid-template-columns: 1fr;
@@ -525,6 +703,17 @@ button {
 
   .queue-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-showcase {
+    right: -14rem;
+    width: 690px;
+    opacity: 0.34;
+  }
+
+  .ideas-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -554,6 +743,13 @@ button {
     font-size: clamp(3rem, 18vw, 5rem);
   }
 
+  .hero-showcase {
+    right: -15rem;
+    top: 48%;
+    width: 580px;
+    opacity: 0.23;
+  }
+
   .primary-link,
   .secondary-button {
     width: 100%;
@@ -570,5 +766,13 @@ button {
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .site-footer nav {
+    justify-content: flex-start;
+  }
+
+  .contact-main {
+    padding-top: 10rem;
   }
 }

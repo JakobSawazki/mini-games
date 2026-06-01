@@ -6,22 +6,26 @@
     <meta name="theme-color" content="#070a12">
     <meta
       name="description"
-      content="A playful home for tiny browser games, starting with Volt Runner."
+      content="Games Lab by Sawazki Electronics: a playful home for browser mini-games."
     >
-    <title>Mini Games Lab</title>
-    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <title>Games Lab | Sawazki Electronics</title>
+    <link rel="icon" href="./assets/games-lab-mark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
     <div class="site-shell">
       <header class="site-header">
-        <a class="brand" href="#top" aria-label="Mini Games Lab home">
-          <span class="brand-glyph" aria-hidden="true"></span>
-          <span>Mini Games Lab</span>
+        <a class="brand" href="./index.html#top" aria-label="Games Lab home">
+          <img src="./assets/games-lab-mark.svg" alt="" aria-hidden="true">
+          <span>
+            <strong>Games Lab</strong>
+            <small>Sawazki Electronics</small>
+          </span>
         </a>
         <nav class="site-nav" aria-label="Primary">
           <a href="#games">Games</a>
-          <a href="#queue">Queue</a>
+          <a href="#ideas">Ideas</a>
+          <a href="./contact.html">Kontakt</a>
           <a href="https://jakobsawazki.github.io/volt-runner/">Play</a>
         </nav>
       </header>
@@ -29,11 +33,16 @@
       <main id="top">
         <section class="hero" aria-labelledby="heroTitle">
           <canvas id="heroCanvas" aria-hidden="true"></canvas>
+          <img
+            class="hero-showcase"
+            src="./assets/games-lab-showcase.svg"
+            alt="A circuit-board arcade scene with highlights from upcoming mini games"
+          >
           <div class="hero-content">
-            <p class="eyebrow">Browser games, tiny downloads, instant sparks</p>
-            <h1 id="heroTitle">Mini Games Lab</h1>
+            <p class="eyebrow">Sawazki Electronics Arcade Division</p>
+            <h1 id="heroTitle">Games Lab</h1>
             <p class="hero-copy">
-              A growing arcade shelf for fast, weird, snack-sized games you can open anywhere.
+              Tiny browser games with circuit energy, clean mechanics, and enough spark for one more run.
             </p>
             <div class="hero-actions">
               <a class="primary-link" href="https://jakobsawazki.github.io/volt-runner/">
@@ -108,7 +117,7 @@
         <section id="queue" class="queue-section" aria-labelledby="queueTitle">
           <div class="section-heading">
             <p class="eyebrow">Build queue</p>
-            <h2 id="queueTitle">Small Games, Big Personality</h2>
+            <h2 id="queueTitle">Ready For Bigger Builds</h2>
           </div>
           <div class="queue-strip">
             <span>Terminal Escape</span>
@@ -116,12 +125,47 @@
             <span>Neon Reflex</span>
             <span>Bug Squasher</span>
           </div>
+          <div class="future-panel">
+            <p>
+              Games Lab is set up as a home base for quick mini-games now and richer embedded browser games later.
+            </p>
+          </div>
+        </section>
+
+        <section id="ideas" class="ideas-section" aria-labelledby="ideasTitle">
+          <div class="section-heading">
+            <p class="eyebrow">Community input</p>
+            <h2 id="ideasTitle">Ideas Become Games</h2>
+          </div>
+          <div class="ideas-grid">
+            <article>
+              <h3>Pitch a mechanic</h3>
+              <p>Short ideas, strange constraints, funny level concepts, or one-button game loops.</p>
+            </article>
+            <article>
+              <h3>No star ratings</h3>
+              <p>The lab collects prompts for better games, not generic scores.</p>
+            </article>
+            <article>
+              <h3>Build loop</h3>
+              <p>Good ideas can become prototypes, playable cards, or full mini-games on this shelf.</p>
+            </article>
+          </div>
+          <a
+            class="idea-link"
+            href="mailto:jakob.sawazki@googlemail.com?subject=Games%20Lab%20Idea&body=Meine%20Idee%20fuer%20Games%20Lab%3A%0A%0ASpielidee%3A%0AMechanik%3A%0AWarum%20macht%20es%20Spass%3A"
+          >
+            Idee einsenden
+          </a>
         </section>
       </main>
 
       <footer class="site-footer">
-        <span>Mini Games Lab</span>
-        <a href="https://github.com/JakobSawazki/volt-runner">Volt Runner on GitHub</a>
+        <span>&copy; 2026 Sawazki Electronics / Games Lab</span>
+        <nav aria-label="Footer">
+          <a href="./contact.html">Kontakt & Impressum</a>
+          <a href="https://github.com/JakobSawazki/mini-games">GitHub</a>
+        </nav>
       </footer>
     </div>
 

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 640" role="img" aria-labelledby="title desc">
+  <title id="title">Games Lab highlights</title>
+  <desc id="desc">A neon arcade circuit board with cards for Volt Runner and future games.</desc>
+  <defs>
+    <linearGradient id="panel" x1="80" y1="40" x2="700" y2="590" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#142232"/>
+      <stop offset="1" stop-color="#071015"/>
+    </linearGradient>
+    <linearGradient id="hot" x1="150" y1="120" x2="590" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#42e8d4"/>
+      <stop offset=".5" stop-color="#8dff62"/>
+      <stop offset="1" stop-color="#f5c84b"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="760" height="640" rx="42" fill="#070a12" opacity=".18"/>
+  <g opacity=".28" stroke="#c3e3ea" stroke-width="1">
+    <path d="M40 80h680M40 160h680M40 240h680M40 320h680M40 400h680M40 480h680M40 560h680"/>
+    <path d="M80 40v560M160 40v560M240 40v560M320 40v560M400 40v560M480 40v560M560 40v560M640 40v560"/>
+  </g>
+  <rect x="92" y="78" width="520" height="390" rx="24" fill="url(#panel)" stroke="#42e8d4" stroke-width="2" opacity=".96"/>
+  <path d="M158 318h126v-92h148v72h112" fill="none" stroke="url(#hot)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <circle cx="158" cy="318" r="28" fill="#65f16f" filter="url(#glow)"/>
+  <rect x="520" y="270" width="96" height="96" rx="18" fill="#202a32" stroke="#f5fbff" stroke-width="4"/>
+  <path d="M496 292h24M496 318h24M496 344h24M616 292h28M616 318h28M616 344h28" stroke="#9cb3bd" stroke-width="5" stroke-linecap="round"/>
+  <g>
+    <rect x="124" y="444" width="178" height="132" rx="18" fill="#101824" stroke="#42e8d4" stroke-width="2"/>
+    <text x="150" y="494" fill="#f5fbff" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800">Volt</text>
+    <text x="150" y="532" fill="#42e8d4" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800">Runner</text>
+  </g>
+  <g opacity=".9">
+    <rect x="330" y="436" width="138" height="116" rx="16" fill="#101824" stroke="#5da9ff" stroke-width="2"/>
+    <circle cx="384" cy="486" r="26" fill="none" stroke="#5da9ff" stroke-width="5"/>
+    <path d="M410 486h38" stroke="#ff6d65" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g opacity=".9">
+    <rect x="496" y="420" width="152" height="134" rx="16" fill="#101824" stroke="#f5c84b" stroke-width="2"/>
+    <rect x="538" y="468" width="64" height="38" rx="8" fill="#9f8cff"/>
+    <circle cx="550" cy="520" r="13" fill="#070a12" stroke="#f5c84b" stroke-width="5"/>
+    <circle cx="590" cy="520" r="13" fill="#070a12" stroke="#f5c84b" stroke-width="5"/>
+  </g>
+  <path d="M650 110h44v44h-44zM64 210h52v52H64zM652 258l36 64h-72z" fill="none" stroke="#9f8cff" stroke-width="6" opacity=".8"/>
+  <path d="M658 126h28M672 112v28" stroke="#42e8d4" stroke-width="6" stroke-linecap="round"/>
+</svg>
