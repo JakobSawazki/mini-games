@@ -74,7 +74,8 @@ mini-games/
 | v0.3 | `6222089` | Raster-Logo, Hero-Bild und Game-Shelf-Artworks |
 | v0.4 | `2fd9d37` | Deutsche Texte, Umlaute und lokalisierte Game-Shelf-Texte |
 | v0.5 | `3b870c9` | Direktes Ideenformular, klarere Hero-Zeile und Projektdokumentation |
-| v0.6 | aktueller Stand | Puzzle Lab als zweites Live-Game in Game Shelf und Zufallsstart |
+| v0.6 | `7d19ce2` | Puzzle Lab als zweites Live-Game in Game Shelf und Zufallsstart |
+| v0.7 | aktueller Stand | Puzzle Lab mit Acryl-Naturcover auf der Hauptseite |
 
 ## Versionszustände Volt Runner
 
@@ -90,6 +91,7 @@ mini-games/
 | Version | Commit | Inhalt |
 | --- | --- | --- |
 | v0.1 | `733979c` | Puzzle-Game mit Upload, Beispielbildern und drei Schwierigkeitsstufen |
+| v0.2 | aktueller Stand | Futuristische Beispielbilder durch Acryl-Naturmotive ersetzt |
 
 ## Lokale Entwicklung
 
