@@ -104,9 +104,18 @@ button {
 }
 
 .brand small b,
-.footer-brand b {
+.footer-brand a {
   color: var(--electric);
   text-shadow: 0 0 14px rgba(31, 174, 255, 0.48);
+}
+
+.footer-brand a {
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer-brand a:hover {
+  color: var(--cyan);
 }
 
 .site-nav {

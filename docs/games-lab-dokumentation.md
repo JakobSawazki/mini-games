@@ -29,6 +29,7 @@ Live-Seiten:
 - Game Shelf mit Volt Runner und Puzzle Lab als Live-Spielen.
 - Platzhalterkarten für `Gravity Courier` und `Pixel Kart`.
 - Kontakt- und Impressumsseite mit Verweis auf die Sawazki-Electronics-Seite.
+- Footer-Brand-Link auf die Sawazki-Electronics-Seite.
 - Direktes Ideenformular auf der Startseite und Kontaktseite.
 - GitHub-Pages-Deployment aus dem `main`-Branch.
 
@@ -77,7 +78,8 @@ mini-games/
 | v0.5 | `3b870c9` | Direktes Ideenformular, klarere Hero-Zeile und Projektdokumentation |
 | v0.6 | `7d19ce2` | Puzzle Lab als zweites Live-Game in Game Shelf und Zufallsstart |
 | v0.7 | `edaee91` | Puzzle Lab mit Acryl-Naturcover auf der Hauptseite |
-| v0.8 | aktueller Stand | Neues Games-Lab-Logo mit Labor- und Gaming-Motiv |
+| v0.8 | `1e5e5a3` | Neues Games-Lab-Logo mit Labor- und Gaming-Motiv |
+| v0.9 | aktueller Stand | Footer-Brand-Link auf die Sawazki-Electronics-Seite |
 
 ## Versionszustände Volt Runner
 
