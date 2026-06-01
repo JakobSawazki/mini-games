@@ -1,7 +1,8 @@
 const canvas = document.querySelector("#heroCanvas");
-const ctx = canvas.getContext("2d");
+const ctx = canvas ? canvas.getContext("2d") : null;
 const shuffleButton = document.querySelector("#shuffleButton");
 const tiltCards = Array.from(document.querySelectorAll("[data-tilt]"));
+const ideaForms = Array.from(document.querySelectorAll("[data-idea-form]"));
 
 const games = [
   "https://jakobsawazki.github.io/volt-runner/"
@@ -23,6 +24,10 @@ let pointerY = 0.5;
 let pixelRatio = 1;
 
 function resizeCanvas() {
+  if (!canvas || !ctx) {
+    return;
+  }
+
   const rect = canvas.getBoundingClientRect();
   pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
   canvas.width = Math.max(1, Math.floor(rect.width * pixelRatio));
@@ -31,6 +36,10 @@ function resizeCanvas() {
 }
 
 function drawSprite(sprite, width, height, now) {
+  if (!ctx) {
+    return;
+  }
+
   const drift = now * sprite.speed * 0.001;
   const px = ((sprite.x + drift) % 1) * width;
   const py = ((sprite.y + Math.sin(drift + sprite.phase) * 0.035 + 1) % 1) * height;
@@ -74,6 +83,10 @@ function drawSprite(sprite, width, height, now) {
 }
 
 function drawGrid(width, height, now) {
+  if (!ctx) {
+    return;
+  }
+
   const spacing = 54;
   const offset = (now * 0.018) % spacing;
   ctx.save();
@@ -97,6 +110,10 @@ function drawGrid(width, height, now) {
 }
 
 function drawScanline(width, height, now) {
+  if (!ctx) {
+    return;
+  }
+
   const y = (now * 0.08) % height;
   ctx.save();
   ctx.globalAlpha = 0.34;
@@ -106,6 +123,10 @@ function drawScanline(width, height, now) {
 }
 
 function frame(now) {
+  if (!canvas || !ctx) {
+    return;
+  }
+
   const width = canvas.width / pixelRatio;
   const height = canvas.height / pixelRatio;
   ctx.clearRect(0, 0, width, height);
@@ -134,17 +155,86 @@ function resetTilt(event) {
   event.currentTarget.style.transform = "";
 }
 
-window.addEventListener("resize", resizeCanvas);
-window.addEventListener("pointermove", (event) => {
-  pointerX = event.clientX / Math.max(1, window.innerWidth);
-  pointerY = event.clientY / Math.max(1, window.innerHeight);
-});
+function setFormStatus(form, message, state) {
+  const status = form.querySelector("[data-form-status]");
+  if (!status) {
+    return;
+  }
 
-shuffleButton.addEventListener("click", launchRandomGame);
+  status.textContent = message;
+  status.classList.remove("is-success", "is-error");
+  if (state) {
+    status.classList.add(`is-${state}`);
+  }
+}
+
+async function submitIdea(event) {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+  const submitButton = form.querySelector("button[type='submit']");
+  const emailField = form.querySelector("input[type='email']");
+  const formData = new FormData(form);
+
+  if (emailField && emailField.value) {
+    formData.set("_replyto", emailField.value);
+  }
+
+  if (formData.get("_honey")) {
+    setFormStatus(form, "Danke, deine Idee wurde übernommen.", "success");
+    form.reset();
+    return;
+  }
+
+  setFormStatus(form, "Idee wird gesendet ...");
+  if (submitButton) {
+    submitButton.disabled = true;
+  }
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      headers: {
+        Accept: "application/json"
+      },
+      body: formData
+    });
+
+    if (!response.ok) {
+      throw new Error(`Form submit failed with ${response.status}`);
+    }
+
+    form.reset();
+    setFormStatus(form, "Danke, deine Idee ist angekommen.", "success");
+  } catch (error) {
+    setFormStatus(form, "Das hat gerade nicht geklappt. Bitte versuche es gleich noch einmal.", "error");
+  } finally {
+    if (submitButton) {
+      submitButton.disabled = false;
+    }
+  }
+}
+
+if (canvas && ctx) {
+  window.addEventListener("resize", resizeCanvas);
+  window.addEventListener("pointermove", (event) => {
+    pointerX = event.clientX / Math.max(1, window.innerWidth);
+    pointerY = event.clientY / Math.max(1, window.innerHeight);
+  });
+
+  resizeCanvas();
+  requestAnimationFrame(frame);
+}
+
+if (shuffleButton) {
+  shuffleButton.addEventListener("click", launchRandomGame);
+}
+
 tiltCards.forEach((card) => {
   card.addEventListener("pointermove", tiltCard);
   card.addEventListener("pointerleave", resetTilt);
 });
 
-resizeCanvas();
-requestAnimationFrame(frame);
+ideaForms.forEach((form) => {
+  form.addEventListener("submit", submitIdea);
+});

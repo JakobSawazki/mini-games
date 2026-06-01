@@ -75,12 +75,29 @@
             <p>
               Keine Sterne, keine langen Formulare: kurze Ideen reichen. Was soll passieren, warum macht es Spaß, und was wäre der Twist?
             </p>
-            <a
-              class="idea-link"
-              href="mailto:jakob.sawazki@googlemail.com?subject=Games%20Lab%20Idee&body=Meine%20Idee%20f%C3%BCr%20Games%20Lab%3A%0A%0ASpielidee%3A%0AMechanik%3A%0AWarum%20macht%20es%20Spa%C3%9F%3A"
+            <form
+              class="idea-form compact"
+              data-idea-form
+              action="https://formsubmit.co/ajax/jakob.sawazki@googlemail.com"
+              method="POST"
             >
-              Idee per Mail senden
-            </a>
+              <input type="hidden" name="_subject" value="Neue Games Lab Idee">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="Quelle" value="Games Lab Kontaktseite">
+              <input class="honey-field" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+              <label>
+                E-Mail für Rückfragen
+                <input type="email" name="email" autocomplete="email" placeholder="name@example.com" required>
+              </label>
+              <label>
+                Spielidee
+                <textarea name="Spielidee" rows="5" placeholder="Kurz, roh und gern wild." required minlength="10"></textarea>
+              </label>
+              <button class="idea-submit-button" type="submit">Idee senden</button>
+              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+            </form>
           </article>
         </section>
       </main>
@@ -94,5 +111,6 @@
         </nav>
       </footer>
     </div>
+    <script src="./main.js"></script>
   </body>
 </html>

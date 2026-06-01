@@ -39,7 +39,7 @@
             alt="Neonblaues Elektronik-Arcade-Labor mit Mini-Game-Prototypen"
           >
           <div class="hero-content">
-            <p class="eyebrow">Sawazki Electronics Arcade Division</p>
+            <p class="eyebrow">Sawazki Electronics Games Lab</p>
             <h1 id="heroTitle">Games Lab</h1>
             <p class="hero-copy">
               Kleine Browser-Games mit Circuit-Energie, klaren Mechaniken und genug Funken für eine weitere Runde.
@@ -144,12 +144,47 @@
               <p>Gute Ideen können als Prototyp, spielbare Karte oder vollständiges Mini-Game auf dem Shelf landen.</p>
             </article>
           </div>
-          <a
-            class="idea-link"
-            href="mailto:jakob.sawazki@googlemail.com?subject=Games%20Lab%20Idee&body=Meine%20Idee%20f%C3%BCr%20Games%20Lab%3A%0A%0ASpielidee%3A%0AMechanik%3A%0AWarum%20macht%20es%20Spa%C3%9F%3A"
-          >
-            Idee einsenden
-          </a>
+          <div class="idea-submit-panel">
+            <form
+              class="idea-form"
+              data-idea-form
+              action="https://formsubmit.co/ajax/jakob.sawazki@googlemail.com"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="Neue Games Lab Idee">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="Quelle" value="Games Lab Startseite">
+              <input class="honey-field" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+              <div class="form-row">
+                <label>
+                  Dein Name
+                  <input type="text" name="Name" autocomplete="name" placeholder="Optional">
+                </label>
+                <label>
+                  E-Mail für Rückfragen
+                  <input type="email" name="email" autocomplete="email" placeholder="name@example.com" required>
+                </label>
+              </div>
+
+              <label>
+                Deine Spielidee
+                <textarea name="Spielidee" rows="5" placeholder="Was soll passieren? Was macht daran Spaß?" required minlength="10"></textarea>
+              </label>
+
+              <label>
+                Besonderer Twist
+                <input type="text" name="Twist" placeholder="Optional: ein Feature, Hindernis oder Modus">
+              </label>
+
+              <p class="form-footnote">
+                Deine Idee wird direkt per Formular an Sawazki Electronics weitergeleitet.
+              </p>
+              <button class="idea-submit-button" type="submit">Idee senden</button>
+              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+            </form>
+          </div>
         </section>
       </main>
 

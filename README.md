@@ -1,23 +1,33 @@
 # Games Lab
 
-Games Lab is a static homepage for a growing collection of small browser games by Sawazki Electronics.
+Games Lab ist die statische Homepage für eine wachsende Sammlung kleiner Browser-Games von Sawazki Electronics.
 
-## Live games
+## Dokumentation
+
+- [Games Lab Projektdokumentation](./docs/games-lab-dokumentation.md)
+
+## Live-Seiten
 
 - Volt Runner: https://jakobsawazki.github.io/volt-runner/
 - Games Lab: https://jakobsawazki.github.io/mini-games/
 
-## Brand assets
+## Brand Assets
 
-- `assets/games-lab-logo.png` contains the Games Lab logo image.
-- `assets/games-lab-hero.png` contains the hero highlight image.
-- `assets/cover-volt-runner.png` contains the Volt Runner shelf cover.
-- `assets/cover-gravity-courier.png` and `assets/cover-pixel-kart.png` contain future-game shelf covers.
+- `assets/games-lab-logo.png` enthält das Games-Lab-Logo.
+- `assets/games-lab-hero.png` enthält das Hero-Highlight-Bild.
+- `assets/cover-volt-runner.png` enthält das Volt-Runner-Shelf-Cover.
+- `assets/cover-gravity-courier.png` und `assets/cover-pixel-kart.png` enthalten Cover für zukünftige Game-Ideen.
 
-## Local preview
+## Lokale Vorschau
 
-Open `index.html` in a browser.
+Einen lokalen Server im Projektordner starten, zum Beispiel:
+
+```powershell
+python -m http.server 4173 --bind 127.0.0.1
+```
+
+Danach `http://127.0.0.1:4173/` öffnen.
 
 ## GitHub Pages
 
-The project is built as plain HTML, CSS, and JavaScript, so it can be published from the `main` branch root.
+Das Projekt besteht aus plain HTML, CSS und JavaScript und wird aus dem `main`-Branch-Root über GitHub Pages veröffentlicht.
