@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#070a12">
+    <meta
+      name="description"
+      content="A playful home for tiny browser games, starting with Volt Runner."
+    >
+    <title>Mini Games Lab</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="Mini Games Lab home">
+          <span class="brand-glyph" aria-hidden="true"></span>
+          <span>Mini Games Lab</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#games">Games</a>
+          <a href="#queue">Queue</a>
+          <a href="https://jakobsawazki.github.io/volt-runner/">Play</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="heroTitle">
+          <canvas id="heroCanvas" aria-hidden="true"></canvas>
+          <div class="hero-content">
+            <p class="eyebrow">Browser games, tiny downloads, instant sparks</p>
+            <h1 id="heroTitle">Mini Games Lab</h1>
+            <p class="hero-copy">
+              A growing arcade shelf for fast, weird, snack-sized games you can open anywhere.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-link" href="https://jakobsawazki.github.io/volt-runner/">
+                Play Volt Runner
+              </a>
+              <button id="shuffleButton" class="secondary-button" type="button">Random launch</button>
+            </div>
+          </div>
+          <a class="scroll-cue" href="#games" aria-label="Jump to games">
+            <span></span>
+          </a>
+        </section>
+
+        <section id="games" class="games-section" aria-labelledby="gamesTitle">
+          <div class="section-heading">
+            <p class="eyebrow">Now playable</p>
+            <h2 id="gamesTitle">Game Shelf</h2>
+          </div>
+
+          <div class="game-grid">
+            <article class="game-card is-live" data-tilt>
+              <a class="game-cover" href="https://jakobsawazki.github.io/volt-runner/" aria-label="Play Volt Runner">
+                <span class="board-art" aria-hidden="true">
+                  <span class="trace trace-a"></span>
+                  <span class="trace trace-b"></span>
+                  <span class="trace trace-c"></span>
+                  <span class="node node-a"></span>
+                  <span class="node node-b"></span>
+                  <span class="chip"></span>
+                </span>
+              </a>
+              <div class="game-info">
+                <div>
+                  <p class="game-status">Live game</p>
+                  <h3>Volt Runner</h3>
+                  <p>Route the current, dodge leaks, and keep the core online.</p>
+                </div>
+                <a class="play-link" href="https://jakobsawazki.github.io/volt-runner/">Play now</a>
+              </div>
+            </article>
+
+            <article class="game-card is-queued" data-tilt>
+              <div class="game-cover courier-art" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="game-info">
+                <div>
+                  <p class="game-status">Next idea</p>
+                  <h3>Gravity Courier</h3>
+                  <p>Deliver cargo through orbit lanes with one nervous thruster.</p>
+                </div>
+                <span class="soon-label">Queued</span>
+              </div>
+            </article>
+
+            <article class="game-card is-queued" data-tilt>
+              <div class="game-cover kart-art" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="game-info">
+                <div>
+                  <p class="game-status">Next idea</p>
+                  <h3>Pixel Kart</h3>
+                  <p>One lap, one timer, one more try than planned.</p>
+                </div>
+                <span class="soon-label">Queued</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="queue" class="queue-section" aria-labelledby="queueTitle">
+          <div class="section-heading">
+            <p class="eyebrow">Build queue</p>
+            <h2 id="queueTitle">Small Games, Big Personality</h2>
+          </div>
+          <div class="queue-strip">
+            <span>Terminal Escape</span>
+            <span>Circuit Defender</span>
+            <span>Neon Reflex</span>
+            <span>Bug Squasher</span>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>Mini Games Lab</span>
+        <a href="https://github.com/JakobSawazki/volt-runner">Volt Runner on GitHub</a>
+      </footer>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
