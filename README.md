@@ -9,6 +9,7 @@ Games Lab ist die statische Homepage für eine wachsende Sammlung kleiner Browse
 ## Live-Seiten
 
 - Volt Runner: https://jakobsawazki.github.io/volt-runner/
+- Puzzle Lab: https://jakobsawazki.github.io/puzzle-lab/
 - Games Lab: https://jakobsawazki.github.io/mini-games/
 
 ## Brand Assets
@@ -16,6 +17,7 @@ Games Lab ist die statische Homepage für eine wachsende Sammlung kleiner Browse
 - `assets/games-lab-logo.png` enthält das Games-Lab-Logo.
 - `assets/games-lab-hero.png` enthält das Hero-Highlight-Bild.
 - `assets/cover-volt-runner.png` enthält das Volt-Runner-Shelf-Cover.
+- `assets/cover-puzzle-lab.jpg` enthält das Puzzle-Lab-Shelf-Cover.
 - `assets/cover-gravity-courier.png` und `assets/cover-pixel-kart.png` enthalten Cover für zukünftige Game-Ideen.
 
 ## Lokale Vorschau

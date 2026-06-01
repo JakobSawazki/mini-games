@@ -11,6 +11,7 @@ Live-Seiten:
 - Games Lab: https://jakobsawazki.github.io/mini-games/
 - Kontakt & Impressum: https://jakobsawazki.github.io/mini-games/contact.html
 - Volt Runner: https://jakobsawazki.github.io/volt-runner/
+- Puzzle Lab: https://jakobsawazki.github.io/puzzle-lab/
 - Sawazki Electronics: https://jakobsawazki.github.io/sawazki-electronics/
 
 ## Brand-Entscheidungen
@@ -24,7 +25,7 @@ Live-Seiten:
 
 - Statische Games-Lab-Homepage mit Neon-/Circuit-Art-Direction.
 - Rasterbasierte PNG-Assets für Logo, Hero-Bild und Game-Shelf-Cover.
-- Game Shelf mit Volt Runner als erstem Live-Spiel.
+- Game Shelf mit Volt Runner und Puzzle Lab als Live-Spielen.
 - Platzhalterkarten für `Gravity Courier` und `Pixel Kart`.
 - Kontakt- und Impressumsseite mit Verweis auf die Sawazki-Electronics-Seite.
 - Direktes Ideenformular auf der Startseite und Kontaktseite.
@@ -52,6 +53,7 @@ mini-games/
     games-lab-logo.png
     games-lab-hero.png
     cover-volt-runner.png
+    cover-puzzle-lab.jpg
     cover-gravity-courier.png
     cover-pixel-kart.png
   docs/
@@ -71,7 +73,8 @@ mini-games/
 | v0.2 | `e7c5b51` | Games-Lab-Brand für Sawazki Electronics |
 | v0.3 | `6222089` | Raster-Logo, Hero-Bild und Game-Shelf-Artworks |
 | v0.4 | `2fd9d37` | Deutsche Texte, Umlaute und lokalisierte Game-Shelf-Texte |
-| v0.5 | aktueller Stand | Direktes Ideenformular, klarere Hero-Zeile und Projektdokumentation |
+| v0.5 | `3b870c9` | Direktes Ideenformular, klarere Hero-Zeile und Projektdokumentation |
+| v0.6 | aktueller Stand | Puzzle Lab als zweites Live-Game in Game Shelf und Zufallsstart |
 
 ## Versionszustände Volt Runner
 
@@ -81,6 +84,12 @@ mini-games/
 | v0.2 | `ca3f064` | Schwierigkeitslevel leicht, mittel und schwer |
 | v0.3 | `efb91de` | Rücklinks zur Games-Lab-Hauptseite |
 | v0.4 | `9c5f623` | Gemeinsames rasterbasiertes Games-Lab-Branding |
+
+## Versionszustände Puzzle Lab
+
+| Version | Commit | Inhalt |
+| --- | --- | --- |
+| v0.1 | `733979c` | Puzzle-Game mit Upload, Beispielbildern und drei Schwierigkeitsstufen |
 
 ## Lokale Entwicklung
 

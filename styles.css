@@ -288,7 +288,7 @@ button {
   width: min(1120px, 100%);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(280px, 1.35fr) repeat(2, minmax(220px, 0.9fr));
+  grid-template-columns: repeat(4, minmax(210px, 1fr));
   gap: 1rem;
 }
 
@@ -309,7 +309,7 @@ button {
 }
 
 .game-card.is-live {
-  min-height: 32rem;
+  min-height: 30rem;
 }
 
 .game-cover {
