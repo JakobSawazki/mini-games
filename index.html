@@ -9,17 +9,17 @@
       content="Games Lab by Sawazki Electronics: a playful home for browser mini-games."
     >
     <title>Games Lab | Sawazki Electronics</title>
-    <link rel="icon" href="./assets/games-lab-mark.svg" type="image/svg+xml">
+    <link rel="icon" href="./assets/games-lab-logo.png" type="image/png">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
     <div class="site-shell">
       <header class="site-header">
         <a class="brand" href="./index.html#top" aria-label="Games Lab home">
-          <img src="./assets/games-lab-mark.svg" alt="" aria-hidden="true">
+          <img src="./assets/games-lab-logo.png" alt="" aria-hidden="true">
           <span>
             <strong>Games Lab</strong>
-            <small>Sawazki Electronics</small>
+            <small>Designed by <b>Sawazki Electronics</b></small>
           </span>
         </a>
         <nav class="site-nav" aria-label="Primary">
@@ -35,8 +35,8 @@
           <canvas id="heroCanvas" aria-hidden="true"></canvas>
           <img
             class="hero-showcase"
-            src="./assets/games-lab-showcase.svg"
-            alt="A circuit-board arcade scene with highlights from upcoming mini games"
+            src="./assets/games-lab-hero.png"
+            alt="A neon blue arcade electronics lab with mini-game prototype screens"
           >
           <div class="hero-content">
             <p class="eyebrow">Sawazki Electronics Arcade Division</p>
@@ -65,14 +65,7 @@
           <div class="game-grid">
             <article class="game-card is-live" data-tilt>
               <a class="game-cover" href="https://jakobsawazki.github.io/volt-runner/" aria-label="Play Volt Runner">
-                <span class="board-art" aria-hidden="true">
-                  <span class="trace trace-a"></span>
-                  <span class="trace trace-b"></span>
-                  <span class="trace trace-c"></span>
-                  <span class="node node-a"></span>
-                  <span class="node node-b"></span>
-                  <span class="chip"></span>
-                </span>
+                <img src="./assets/cover-volt-runner.png" alt="Volt Runner circuit-board game artwork">
               </a>
               <div class="game-info">
                 <div>
@@ -85,8 +78,8 @@
             </article>
 
             <article class="game-card is-queued" data-tilt>
-              <div class="game-cover courier-art" aria-hidden="true">
-                <span></span>
+              <div class="game-cover">
+                <img src="./assets/cover-gravity-courier.png" alt="Gravity Courier spaceship concept artwork">
               </div>
               <div class="game-info">
                 <div>
@@ -99,8 +92,8 @@
             </article>
 
             <article class="game-card is-queued" data-tilt>
-              <div class="game-cover kart-art" aria-hidden="true">
-                <span></span>
+              <div class="game-cover">
+                <img src="./assets/cover-pixel-kart.png" alt="Pixel Kart neon racing concept artwork">
               </div>
               <div class="game-info">
                 <div>
@@ -161,9 +154,10 @@
       </main>
 
       <footer class="site-footer">
-        <span>&copy; 2026 Sawazki Electronics / Games Lab</span>
+        <span class="footer-brand">Games Lab - Designed by <b>Sawazki Electronics</b></span>
         <nav aria-label="Footer">
           <a href="./contact.html">Kontakt & Impressum</a>
+          <a href="https://jakobsawazki.github.io/sawazki-electronics/">Sawazki Electronics</a>
           <a href="https://github.com/JakobSawazki/mini-games">GitHub</a>
         </nav>
       </footer>
