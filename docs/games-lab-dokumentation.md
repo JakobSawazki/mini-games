@@ -4,7 +4,7 @@ Stand: 2026-06-01
 
 ## Kurzüberblick
 
-Games Lab ist die Mini-Games-Homepage von Sawazki Electronics. Die Seite bündelt spielbare Browser-Games, zeigt kommende Ideen und sammelt Community-Vorschläge für neue Spielmechaniken.
+Games Lab ist die Mini-Games-Homepage von Sawazki Electronics. Die Seite bündelt spielbare Browser-Games, Spielprototypen und kommende Game-Ideen. Neben kleinen Mini-Games soll hier langfristig auch Raum für Puzzle-, Arcade-, Geschicklichkeits- und Community-Ideen entstehen.
 
 Live-Seiten:
 
@@ -18,13 +18,14 @@ Live-Seiten:
 
 - Sichtbarer Brand-Claim: `Designed by Sawazki Electronics`
 - Hero-Zeile: `Sawazki Electronics Games Lab`
-- `Arcade Division` bleibt als Tonalität passend, ist aber für neue Nutzer weniger eindeutig. Deshalb nutzt die Startseite aktuell die klarere Games-Lab-Zuordnung.
+- Das Games-Lab-Logo ist ein rasterbasiertes Bildmotiv: Neon-Labor-Kolben mit Gamepad-D-Pad, Buttons und Energiepartikeln.
+- Das Logo soll Labor-Experiment, Gaming und Arcade-Energie in einem einfach merkbaren Symbol verbinden.
 - Der GitHub-Link bleibt im Footer als dezenter Transparenz- und Projektlink. Er ist nicht Teil der Hauptnavigation und stört den Spielerfluss nicht.
 
 ## Aktueller Funktionsumfang
 
 - Statische Games-Lab-Homepage mit Neon-/Circuit-Art-Direction.
-- Rasterbasierte PNG-Assets für Logo, Hero-Bild und Game-Shelf-Cover.
+- Rasterbasierte PNG-/JPG-Assets für Logo, Hero-Bild und Game-Shelf-Cover.
 - Game Shelf mit Volt Runner und Puzzle Lab als Live-Spielen.
 - Platzhalterkarten für `Gravity Courier` und `Pixel Kart`.
 - Kontakt- und Impressumsseite mit Verweis auf die Sawazki-Electronics-Seite.
@@ -75,7 +76,8 @@ mini-games/
 | v0.4 | `2fd9d37` | Deutsche Texte, Umlaute und lokalisierte Game-Shelf-Texte |
 | v0.5 | `3b870c9` | Direktes Ideenformular, klarere Hero-Zeile und Projektdokumentation |
 | v0.6 | `7d19ce2` | Puzzle Lab als zweites Live-Game in Game Shelf und Zufallsstart |
-| v0.7 | aktueller Stand | Puzzle Lab mit Acryl-Naturcover auf der Hauptseite |
+| v0.7 | `edaee91` | Puzzle Lab mit Acryl-Naturcover auf der Hauptseite |
+| v0.8 | aktueller Stand | Neues Games-Lab-Logo mit Labor- und Gaming-Motiv |
 
 ## Versionszustände Volt Runner
 
@@ -91,7 +93,9 @@ mini-games/
 | Version | Commit | Inhalt |
 | --- | --- | --- |
 | v0.1 | `733979c` | Puzzle-Game mit Upload, Beispielbildern und drei Schwierigkeitsstufen |
-| v0.2 | aktueller Stand | Futuristische Beispielbilder durch Acryl-Naturmotive ersetzt |
+| v0.2 | `205067e` | Futuristische Beispielbilder durch Acryl-Naturmotive ersetzt |
+| v0.3 | `4d8cafd` | Jigsaw-Teile, separate Ablage, Puzzle-Tisch, ausblendbarer Status und drei Tiermotive |
+| v0.4 | `1473594` | Eigenes Puzzle-Lab-Logo und links ausgerichtete Stage-Überschrift |
 
 ## Lokale Entwicklung
 
@@ -122,6 +126,8 @@ node --check main.js
 
 ## Nächste sinnvolle Schritte
 
+- Startseiten-Text noch stärker als kreatives Games Lab mit Spielbereichen, Prototypen und Community-Ideen formulieren.
+- Community-Pulse statt klassischer Sternebewertung prüfen.
 - FormSubmit-E-Mail nach der ersten echten Einsendung bestätigen.
 - Falls der Traffic steigt: reCAPTCHA wieder aktivieren oder auf einen eigenen kleinen Backend-Endpunkt wechseln.
 - Für jedes neue Game eine eigene Cover-Grafik und einen eigenen Status im Game Shelf ergänzen.

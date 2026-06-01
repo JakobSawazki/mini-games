@@ -1,6 +1,6 @@
 # Games Lab
 
-Games Lab ist die statische Homepage für eine wachsende Sammlung kleiner Browser-Games von Sawazki Electronics.
+Games Lab ist die statische Homepage für eine wachsende Sammlung kleiner Browser-Games, Spielprototypen und Community-Ideen von Sawazki Electronics.
 
 ## Dokumentation
 
@@ -8,13 +8,13 @@ Games Lab ist die statische Homepage für eine wachsende Sammlung kleiner Browse
 
 ## Live-Seiten
 
+- Games Lab: https://jakobsawazki.github.io/mini-games/
 - Volt Runner: https://jakobsawazki.github.io/volt-runner/
 - Puzzle Lab: https://jakobsawazki.github.io/puzzle-lab/
-- Games Lab: https://jakobsawazki.github.io/mini-games/
 
 ## Brand Assets
 
-- `assets/games-lab-logo.png` enthält das Games-Lab-Logo.
+- `assets/games-lab-logo.png` enthält das Games-Lab-Logo als Rasterbild: Labor-Kolben, Gamepad-Elemente und Neon-Energie.
 - `assets/games-lab-hero.png` enthält das Hero-Highlight-Bild.
 - `assets/cover-volt-runner.png` enthält das Volt-Runner-Shelf-Cover.
 - `assets/cover-puzzle-lab.jpg` enthält das Puzzle-Lab-Shelf-Cover.
