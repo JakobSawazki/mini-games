@@ -1,6 +1,7 @@
 const canvas = document.querySelector("#heroCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const shuffleButton = document.querySelector("#shuffleButton");
+const heroShowcaseButton = document.querySelector("#heroShowcaseButton");
 const tiltCards = Array.from(document.querySelectorAll("[data-tilt]"));
 const ideaForms = Array.from(document.querySelectorAll("[data-idea-form]"));
 
@@ -19,6 +20,7 @@ const sprites = Array.from({ length: 42 }, (_, index) => ({
   type: index % 4,
   phase: Math.random() * Math.PI * 2
 }));
+const bursts = [];
 
 let pointerX = 0.5;
 let pointerY = 0.5;
@@ -123,6 +125,39 @@ function drawScanline(width, height, now) {
   ctx.restore();
 }
 
+function drawBursts() {
+  if (!ctx) {
+    return;
+  }
+
+  for (let index = bursts.length - 1; index >= 0; index -= 1) {
+    const burst = bursts[index];
+    burst.x += Math.cos(burst.angle) * burst.speed;
+    burst.y += Math.sin(burst.angle) * burst.speed;
+    burst.life -= 0.018;
+
+    if (burst.life <= 0) {
+      bursts.splice(index, 1);
+      continue;
+    }
+
+    ctx.save();
+    ctx.globalAlpha = Math.max(0, burst.life);
+    ctx.strokeStyle = burst.color;
+    ctx.fillStyle = burst.color;
+    ctx.shadowBlur = 16;
+    ctx.shadowColor = burst.color;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(burst.x, burst.y, burst.size, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(burst.x, burst.y, Math.max(1.4, burst.size * 0.22), 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
 function frame(now) {
   if (!canvas || !ctx) {
     return;
@@ -135,6 +170,7 @@ function frame(now) {
   ctx.fillRect(0, 0, width, height);
   drawGrid(width, height, now);
   sprites.forEach((sprite) => drawSprite(sprite, width, height, now));
+  drawBursts();
   drawScanline(width, height, now);
   requestAnimationFrame(frame);
 }
@@ -142,6 +178,41 @@ function frame(now) {
 function launchRandomGame() {
   const index = Math.floor(Math.random() * games.length);
   window.location.href = games[index];
+}
+
+function triggerHeroShowcase(event) {
+  if (!heroShowcaseButton) {
+    return;
+  }
+
+  const buttonRect = heroShowcaseButton.getBoundingClientRect();
+  const localX = event.clientX ? event.clientX - buttonRect.left : buttonRect.width * 0.5;
+  const localY = event.clientY ? event.clientY - buttonRect.top : buttonRect.height * 0.5;
+  heroShowcaseButton.style.setProperty("--spark-x", `${(localX / buttonRect.width) * 100}%`);
+  heroShowcaseButton.style.setProperty("--spark-y", `${(localY / buttonRect.height) * 100}%`);
+  heroShowcaseButton.classList.remove("is-activated");
+  void heroShowcaseButton.offsetWidth;
+  heroShowcaseButton.classList.add("is-activated");
+
+  if (canvas) {
+    const canvasRect = canvas.getBoundingClientRect();
+    const originX = (event.clientX || buttonRect.left + buttonRect.width * 0.5) - canvasRect.left;
+    const originY = (event.clientY || buttonRect.top + buttonRect.height * 0.5) - canvasRect.top;
+
+    for (let index = 0; index < 22; index += 1) {
+      bursts.push({
+        x: originX,
+        y: originY,
+        angle: (Math.PI * 2 * index) / 22 + Math.random() * 0.18,
+        speed: 2.6 + Math.random() * 3.4,
+        size: 3 + Math.random() * 8,
+        color: palette[index % palette.length],
+        life: 1
+      });
+    }
+  }
+
+  window.setTimeout(() => heroShowcaseButton.classList.remove("is-activated"), 720);
 }
 
 function tiltCard(event) {
@@ -229,6 +300,10 @@ if (canvas && ctx) {
 
 if (shuffleButton) {
   shuffleButton.addEventListener("click", launchRandomGame);
+}
+
+if (heroShowcaseButton) {
+  heroShowcaseButton.addEventListener("click", triggerHeroShowcase);
 }
 
 tiltCards.forEach((card) => {

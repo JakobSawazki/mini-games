@@ -1,6 +1,6 @@
 # Games Lab Projektdokumentation
 
-Stand: 2026-06-01
+Stand: 2026-06-02
 
 ## Kurzüberblick
 
@@ -8,8 +8,8 @@ Games Lab ist die Mini-Games-Homepage von Sawazki Electronics. Die Seite bündel
 
 Live-Seiten:
 
-- Games Lab: https://jakobsawazki.github.io/mini-games/
-- Kontakt & Impressum: https://jakobsawazki.github.io/mini-games/contact.html
+- Games Lab: https://jakobsawazki.github.io/games-lab/
+- Kontakt & Impressum: https://jakobsawazki.github.io/games-lab/contact.html
 - Volt Runner: https://jakobsawazki.github.io/volt-runner/
 - Puzzle Lab: https://jakobsawazki.github.io/puzzle-lab/
 - Sawazki Electronics: https://jakobsawazki.github.io/sawazki-electronics/
@@ -20,6 +20,7 @@ Live-Seiten:
 - Hero-Zeile: `Sawazki Electronics Games Lab`
 - Das Games-Lab-Logo ist ein rasterbasiertes Bildmotiv: Neon-Labor-Kolben mit Gamepad-D-Pad, Buttons und Energiepartikeln.
 - Das Logo soll Labor-Experiment, Gaming und Arcade-Energie in einem einfach merkbaren Symbol verbinden.
+- Das Games-Lab-Logo liegt zentral im Games-Lab-Projekt und wird von Unterprojekten als gemeinsames Brand-Asset verlinkt.
 - Der GitHub-Link bleibt im Footer als dezenter Transparenz- und Projektlink. Er ist nicht Teil der Hauptnavigation und stört den Spielerfluss nicht.
 
 ## Aktueller Funktionsumfang
@@ -32,6 +33,7 @@ Live-Seiten:
 - Footer-Brand-Link auf die Sawazki-Electronics-Seite.
 - Präzisierter Impressumstext: Games Lab wird als Spieleentwicklungs-Projekt eingeordnet.
 - Direktes Ideenformular auf der Startseite und Kontaktseite.
+- Interaktives Hero-Bild mit Hover-Sweep und Klick-Impuls.
 - GitHub-Pages-Deployment aus dem `main`-Branch.
 
 ## Ideenformular
@@ -51,12 +53,12 @@ Wichtig: Bei der ersten echten Einsendung kann FormSubmit eine Bestätigung an d
 ## Repository-Struktur
 
 ```text
-mini-games/
+Games Lab/
   assets/
     games-lab-logo.png
     games-lab-hero.png
     cover-volt-runner.png
-    cover-puzzle-lab.jpg
+    puzzle-lab-logo.png
     cover-gravity-courier.png
     cover-pixel-kart.png
   docs/
@@ -68,7 +70,7 @@ mini-games/
   README.md
 ```
 
-## Versionszustände Mini-Games
+## Versionszustände Games Lab
 
 | Version | Commit | Inhalt |
 | --- | --- | --- |
@@ -81,7 +83,8 @@ mini-games/
 | v0.7 | `edaee91` | Puzzle Lab mit Acryl-Naturcover auf der Hauptseite |
 | v0.8 | `1e5e5a3` | Neues Games-Lab-Logo mit Labor- und Gaming-Motiv |
 | v0.9 | `41e2fc4` | Footer-Brand-Link auf die Sawazki-Electronics-Seite |
-| v0.10 | aktueller Stand | Präzisierter Impressumstext für Games Lab |
+| v0.10 | `ffb3b28` | Präzisierter Impressumstext für Games Lab |
+| v0.11 | aktueller Stand | Ordner und Repository auf Games Lab umbenannt, interaktives Hero-Bild, größeres Brand-Logo und Puzzle-Lab-Logo im Game Shelf |
 
 ## Versionszustände Volt Runner
 
@@ -91,6 +94,8 @@ mini-games/
 | v0.2 | `ca3f064` | Schwierigkeitslevel leicht, mittel und schwer |
 | v0.3 | `efb91de` | Rücklinks zur Games-Lab-Hauptseite |
 | v0.4 | `9c5f623` | Gemeinsames rasterbasiertes Games-Lab-Branding |
+| v0.5 | `9ec0879` | Aktualisiertes gemeinsames Games-Lab-Logo |
+| v0.6 | aktueller Stand | Rücklinks auf die neue Games-Lab-URL und zentrales Logo-Asset |
 
 ## Versionszustände Puzzle Lab
 
@@ -100,11 +105,15 @@ mini-games/
 | v0.2 | `205067e` | Futuristische Beispielbilder durch Acryl-Naturmotive ersetzt |
 | v0.3 | `4d8cafd` | Jigsaw-Teile, separate Ablage, Puzzle-Tisch, ausblendbarer Status und drei Tiermotive |
 | v0.4 | `1473594` | Eigenes Puzzle-Lab-Logo und links ausgerichtete Stage-Überschrift |
+| v0.5 | `2e7222e` | Aktualisiertes gemeinsames Games-Lab-Logo |
+| v0.6 | `3002613` | Engerer Puzzle-Tisch, sortierbare Ablage und ausblendbare Bildbereiche |
+| v0.7 | `7b6a72b` | Cache-Buster für Puzzle-Lab-Assets |
+| v0.8 | aktueller Stand | Zentrales Games-Lab-Logo, neue Games-Lab-Links und unsichtbare Puzzle-Zielraster |
 
 ## Lokale Entwicklung
 
 ```powershell
-cd "G:\Meine Ablage\Codex\mini-games"
+cd "G:\Meine Ablage\Codex\Games Lab"
 python -m http.server 4173 --bind 127.0.0.1
 ```
 
@@ -126,7 +135,7 @@ node --check main.js
 2. Lokal im Browser prüfen.
 3. Commit auf `main` erstellen.
 4. Nach GitHub pushen.
-5. GitHub Pages veröffentlicht die neue Version unter `https://jakobsawazki.github.io/mini-games/`.
+5. GitHub Pages veröffentlicht die neue Version unter `https://jakobsawazki.github.io/games-lab/`.
 
 ## Nächste sinnvolle Schritte
 
