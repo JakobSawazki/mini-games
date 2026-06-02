@@ -7,7 +7,8 @@ const ideaForms = Array.from(document.querySelectorAll("[data-idea-form]"));
 
 const games = [
   "https://jakobsawazki.github.io/volt-runner/",
-  "https://jakobsawazki.github.io/puzzle-lab/"
+  "https://jakobsawazki.github.io/puzzle-lab/",
+  "https://jakobsawazki.github.io/wimmel-lab/"
 ];
 
 const palette = ["#42e8d4", "#8dff62", "#f5c84b", "#ff6d65", "#9f8cff", "#5da9ff"];

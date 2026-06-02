@@ -10,6 +10,7 @@ Games Lab ist die statische Games-Homepage von Sawazki Electronics. Die Seite b�
 - Kontakt & Impressum: https://jakobsawazki.github.io/games-lab/contact.html
 - Volt Runner: https://jakobsawazki.github.io/volt-runner/
 - Puzzle Lab: https://jakobsawazki.github.io/puzzle-lab/
+- Wimmel Lab: https://jakobsawazki.github.io/wimmel-lab/
 - Sawazki Electronics: https://jakobsawazki.github.io/sawazki-electronics/
 
 ## Brand
@@ -25,7 +26,7 @@ Games Lab ist die statische Games-Homepage von Sawazki Electronics. Die Seite b�
 
 - Statische Games-Lab-Homepage mit Neon-/Circuit-Art-Direction.
 - Rasterbasierte PNG-/JPG-Assets für Logo, Hero-Bild und Game-Shelf-Cover.
-- Game Shelf mit Volt Runner und Puzzle Lab als Live-Spielen.
+- Game Shelf mit Volt Runner, Puzzle Lab und Wimmel Lab als Live-Spielen.
 - Platzhalterkarten für `Gravity Courier` und `Pixel Kart`.
 - Kontakt- und Impressumsseite mit Verweis auf die Sawazki-Electronics-Seite.
 - Footer-Brand-Link auf die Sawazki-Electronics-Seite.
@@ -53,6 +54,8 @@ Wichtig: Bei der ersten echten Einsendung kann FormSubmit eine Bestätigung an d
 - `assets/games-lab-hero.png` enthält das interaktive Hero-Highlight-Bild.
 - `assets/cover-volt-runner.png` enthält das Volt-Runner-Shelf-Cover.
 - `assets/puzzle-lab-logo.png` enthält das Puzzle-Lab-Logo für die Shelf-Karte.
+- `assets/cover-wimmel-lab.png` enthält das Wimmel-Lab-Shelf-Cover.
+- `assets/wimmel-lab-logo.png` enthält das Wimmel-Lab-Logo als Rasterbild.
 - `assets/cover-gravity-courier.png` und `assets/cover-pixel-kart.png` enthalten Cover für zukünftige Game-Ideen.
 
 ## Repository-Struktur
@@ -64,6 +67,8 @@ Games Lab/
     games-lab-hero.png
     cover-volt-runner.png
     puzzle-lab-logo.png
+    cover-wimmel-lab.png
+    wimmel-lab-logo.png
     cover-gravity-courier.png
     cover-pixel-kart.png
   contact.html
@@ -88,7 +93,8 @@ Games Lab/
 | v0.9 | `41e2fc4` | Footer-Brand-Link auf die Sawazki-Electronics-Seite |
 | v0.10 | `ffb3b28` | Präzisierter Impressumstext für Games Lab |
 | v0.11 | `61c2ec9` | Ordner und Repository auf Games Lab umbenannt, interaktives Hero-Bild, größeres Brand-Logo und Puzzle-Lab-Logo im Game Shelf |
-| v0.12 | aktueller Stand | Projektdokumentation vollständig in die README integriert und separater Docs-Ordner entfernt |
+| v0.12 | `64f2002` | Projektdokumentation vollständig in die README integriert und separater Docs-Ordner entfernt |
+| v0.13 | aktueller Stand | Wimmel Lab als drittes Live-Spiel in Hero, Zufallsstart und Game Shelf ergänzt |
 
 ## Versionszustände Volt Runner
 
@@ -113,6 +119,12 @@ Games Lab/
 | v0.6 | `3002613` | Engerer Puzzle-Tisch, sortierbare Ablage und ausblendbare Bildbereiche |
 | v0.7 | `7b6a72b` | Cache-Buster für Puzzle-Lab-Assets |
 | v0.8 | `112073c` | Zentrales Games-Lab-Logo, neue Games-Lab-Links und unsichtbare Puzzle-Zielraster |
+
+## Versionszustände Wimmel Lab
+
+| Version | Commit | Inhalt |
+| --- | --- | --- |
+| v0.1 | aktueller Stand | Wimmelbild-Suchspiel mit Inventar, Rätseln, generierten Rasterbildern und Three.js-Schatzkiste |
 
 ## Lokale Entwicklung
 
